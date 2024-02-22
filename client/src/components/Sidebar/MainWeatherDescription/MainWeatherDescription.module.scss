@@ -1,0 +1,11 @@
+.weather__desc {
+	font-size: 0.875rem;
+	&__temp {
+		font-weight: 400;
+		font-size: 2.5rem;
+		text-align: center;
+	}
+	&__cond {
+		font-size: 1.25rem;
+	}
+}

@@ -1,0 +1,45 @@
+.user__city {
+	position: relative;
+	&__list {
+		background: var(--main-gradient-color-start);
+		height: auto;
+		width: 100%;
+		overflow: hidden;
+	}
+	& li {
+		height: 50px;
+		padding: 0 10px;
+		text-transform: capitalize;
+		transition: 0.3s ease-in;
+		&.active,
+		&:hover {
+			background: var(--main-gradient-color-end);
+		}
+		& a {
+			color: var(--text-color);
+			text-decoration: none;
+			text-align: center;
+			vertical-align: middle;
+			width: 100%;
+		}
+		& img {
+			width: 25px;
+			aspect-ratio: 1/1;
+		}
+		& button {
+			& img {
+				margin: 0 0 0 5px;
+				width: 0px;
+				aspect-ratio: 1/1;
+				transition: 0.3s ease;
+			}
+		}
+		&:hover {
+			& button {
+				& img {
+					width: 15px;
+				}
+			}
+		}
+	}
+}

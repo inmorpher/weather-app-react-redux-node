@@ -1,0 +1,81 @@
+.controls {
+	&__update,
+	&__toggle__metric,
+	&__toggle__theme {
+		cursor: pointer;
+	}
+	&__update {
+		font-size: 0.75rem;
+		font-weight: 300;
+		text-decoration: underline;
+		text-align: center;
+		margin: 0 0 15px 0;
+	}
+	&__toggle {
+		height: auto;
+		gap: 40px;
+		&__wrapper {
+			position: relative;
+			width: 40px;
+			height: 20px;
+			background: var(--main-gradient-color-start);
+			&::before {
+				content: '';
+				position: absolute;
+				transform-origin: center;
+				width: 24px;
+				height: 24px;
+				background: var(--main-gradient-color-end);
+				border-radius: 50%;
+				transition: 0.3s ease;
+			}
+		}
+		&__metric {
+			&.imperial::before {
+				transform: translate(10px, -2px);
+			}
+			&.metric::before {
+				transform: translate(-10px, -2px);
+			}
+		}
+
+		&__icon {
+			position: relative;
+			transform: scale(0.7);
+			padding: 2px;
+			width: 20px;
+			font-size: 1.4rem;
+			text-align: center;
+			aspect-ratio: 1/1;
+			transition: 0.3s ease;
+			&.selected {
+				transform: scale(1);
+			}
+		}
+	}
+}
+
+body {
+	&[data-theme='light'] {
+		.controls {
+			&__toggle {
+				&__theme {
+					&::before {
+						transform: translate(-10px, -2px);
+					}
+				}
+			}
+		}
+	}
+	&[data-theme='dark'] {
+		.controls {
+			&__toggle {
+				&__theme {
+					&::before {
+						transform: translate(10px, -2px);
+					}
+				}
+			}
+		}
+	}
+}

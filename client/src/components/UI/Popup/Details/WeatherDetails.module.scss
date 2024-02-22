@@ -1,0 +1,30 @@
+.popup {
+	&__weather__details {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		& > div {
+			padding: 5px 5%;
+			&:not(:last-child) {
+				border-bottom: 1px solid #ffffff50;
+			}
+			&:nth-child(1),
+			&:nth-child(3) {
+				border-right: 1px solid #ffffff50;
+			}
+		}
+
+		&__description {
+			text-align: center;
+			font-weight: 700;
+		}
+		& .item {
+			&.double {
+				grid-column: span 2;
+			}
+			&.text_center {
+				text-align: center;
+			}
+		}
+	}
+}

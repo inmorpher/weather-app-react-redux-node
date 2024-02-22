@@ -1,0 +1,16 @@
+.popup_weather_scale {
+	margin: 10px 0;
+
+	svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: var(--main-gradient);
+		border-radius: 15px;
+		box-shadow: var(--shadow);
+		touch-action: none;
+		rect {
+			cursor: pointer;
+		}
+	}
+}

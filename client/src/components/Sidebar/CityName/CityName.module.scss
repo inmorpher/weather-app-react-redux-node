@@ -1,0 +1,21 @@
+.city {
+	position: relative;
+	color: var(--text-color);
+	font-weight: 500;
+	font-size: 1.2rem;
+	text-align: right;
+	&__location {
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+	}
+	&__local__time {
+		font-weight: 300;
+		font-size: 0.75rem;
+		text-decoration: underline;
+	}
+	&__add {
+		font-weight: 300;
+		font-size: 0.75rem;
+		cursor: pointer;
+	}
+}
