@@ -1,0 +1,10 @@
+{
+    "tabWidth": 4,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "useTabs": true,
+    "printWidth": 100,
+    "useEditorConfig": false,
+    "withNodeModules": true,
+    "plugins": ["prettier-plugin-tailwindcss"]
+}
